@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "jaideraf",
-  "license": "GPLV3",
+  "license": "GPL-3.0-or-later",
   "dependencies": {
     "express": "^4.18.1",
     "axios": "^1.1.3",
@@ -25,5 +25,13 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-promise": "^6.1.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaideraf/getPergamumMarcRecords.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jaideraf/getPergamumMarcRecords/issues"
+  },
+  "homepage": "https://github.com/jaideraf/getPergamumMarcRecords#readme"
 }
