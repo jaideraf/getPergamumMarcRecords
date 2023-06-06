@@ -1,0 +1,28 @@
+{
+  "name": "get-pergamum-marc-records",
+  "version": "1.0.0",
+  "description": "Build MARC bibliographic records from Pergamum APIs",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "jaideraf",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "axios": "^1.1.3",
+    "marcjs": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19",
+    "eslint": "^8.34.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1"
+  }
+}
