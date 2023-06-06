@@ -2,7 +2,7 @@
 
 A tool to get [MARC (Machine-Readable Cataloging)](https://en.wikipedia.org/wiki/MARC_standards) bibliographic records from Pergamum API in many formats (MARC ISO 2709, MARCXML, JSON).
 
-If you want to use a Python version that uses the Pergamum Web Service, see https://github.com/vitorsilverio/libraryapi.
+If you want to use a Python version that uses Pergamum Web Service, see https://github.com/vitorsilverio/libraryapi.
 
 ## Running
 
@@ -13,7 +13,7 @@ If you want to use a Python version that uses the Pergamum Web Service, see http
 - Install dependencies: `npm install`
 - Start the application: `npm start`
 
-Check http://localhost:3000/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
+Check it out:  http://localhost:3000/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
 
 ## Demo
 
