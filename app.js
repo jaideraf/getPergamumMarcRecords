@@ -16,8 +16,8 @@ import routes from './routes.js';
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
-app.listen(3000, () => {
-  console.log('Servidor executando na porta 3000');
-  console.log('Acesse http://localhost:3000');
+app.listen(8080, () => {
+  console.log('Servidor executando na porta 8080');
+  console.log('Acesse http://localhost:8080');
 });
 
