@@ -18,12 +18,12 @@ or
 
 ### Locally
 
-- Make sure you have [Node.js](https://nodejs.org/) 18.16.0+ installed. 
+- Make sure you have [Node.js](https://nodejs.org/) 18.16.0+ installed.
 - Get the source code: `git clone https://github.com/jaideraf/getPergamumMarcRecords && cd getPergamumMarcRecords`
 - Install dependencies: `npm install`
 - Start the application: `npm start`
 
-Check it out:  http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
+Check it out: http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
 
 ## Demo
 
