@@ -1,7 +1,7 @@
 version: "2"
 services:
   node:
-    image: "node:18"
+    image: "node:18.16.0-bullseye-slim"
     user: "node"
     working_dir: /home/node/app
     environment:
@@ -12,4 +12,4 @@ services:
       - "8080"
     ports:
       - "8080:8080"
-    command: bash -c "npm install && npm start"
+    command: bash -c "npm ci --only=production && node app.js"
