@@ -23,7 +23,7 @@ or
 - Install dependencies: `npm install`
 - Start the application: `npm start`
 
-Check it out: http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
+Check it out: https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
 
 ## Demo
 
@@ -31,20 +31,20 @@ Check it out: http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&m
 
 - A MARC ISO 2709 record from Pergamum:
 
-<http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/marc>
+<https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/marc>
 
 - A MARCXML record from Pergamum:
 
-<http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml>
+<https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml>
 
 - A MARC text record (YAZ style) from Pergamum:
 
-<http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=text/plain>
+<https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br&media_type=text/plain>
 
-- A JSON MARC record from Pergamum (default, if no "media_type" is specified or if it is "application/json"):
+- A JSON MARC record from Pergamum:
 
-<http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/json>
+<https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/json>
 
 - A JSON MARC record ([MIJ style](https://github.com/marc4j/marc4j/wiki/MARC-in-JSON-Description)) from Pergamum (default, if no "media_type" is specified):
 
-<http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br>
+<https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br>
