@@ -1,15 +1,15 @@
-version: "2"
+version: '2'
 services:
   node:
-    image: "node:18.16.0-bullseye-slim"
-    user: "node"
+    image: 'node:18.16.0-bullseye-slim'
+    user: 'node'
     working_dir: /home/node/app
     environment:
       - NODE_ENV=production
     volumes:
       - ./:/home/node/app
     expose:
-      - "8080"
+      - '8080'
     ports:
-      - "8080:8080"
-    command: bash -c "npm ci --only=production && node app.js"
+      - '8080:8080'
+    command: bash -c 'npm ci --only=production && node app.js'

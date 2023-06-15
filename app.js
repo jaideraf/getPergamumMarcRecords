@@ -9,14 +9,15 @@
   Author: jaideraf
 */
 
-import express from "express";
+import express from 'express';
+import routes from './routes.js';
+
 const app = express();
-import routes from "./routes.js";
 
 app.use(express.urlencoded({ extended: true }));
 app.use(routes);
 
 app.listen(8080, () => {
-  console.log("Servidor executando na porta 8080");
-  console.log("Acesse http://localhost:8080");
+  console.log('Servidor executando na porta 8080');
+  console.log('Acesse http://localhost:8080');
 });

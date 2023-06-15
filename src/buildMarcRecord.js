@@ -1,8 +1,8 @@
 // Build MARC ISO 2709 record using 'marcjs'
 
-import { Record } from "marcjs";
-import sanatizeResponse from "./sanatizeResponse.js";
-import { subfieldsMap, aggregateSubfields } from "./aggregateSubfields.js";
+import { Record } from 'marcjs';
+import sanatizeResponse from './sanatizeResponse.js';
+import { subfieldsMap, aggregateSubfields } from './aggregateSubfields.js';
 
 export default function buildMarcRecord(data, id) {
   // Check if value is an array or an object (atendimento Pergamum #162129)
@@ -22,12 +22,12 @@ export default function buildMarcRecord(data, id) {
 
   // Build the MARC record
   const record = new Record();
-  record.leader = "     nam a22      a 4500";
+  record.leader = '     nam a22      a 4500';
   subfieldsMap.forEach((obj) => {
     if (parseInt(obj.paragrafo, 10) > 1 && parseInt(obj.paragrafo, 10) < 10) {
       record.append([
-        obj.paragrafo.padStart(3, "0"),
-        obj.subfieldData.replaceAll("#", " "),
+        obj.paragrafo.padStart(3, '0'),
+        obj.subfieldData.replaceAll('#', ' '),
       ]);
     } else {
       const arr = obj.subfieldData.split(/\$/g);
@@ -38,7 +38,7 @@ export default function buildMarcRecord(data, id) {
         newArr.push(subfield.substring(1));
       });
       record.append([
-        obj.paragrafo.padStart(3, "0"),
+        obj.paragrafo.padStart(3, '0'),
         obj.indicadores,
         ...newArr,
       ]);
@@ -49,7 +49,7 @@ export default function buildMarcRecord(data, id) {
   // Ensure the record have the right control number (Pergamum does not always
   // respect that)
   record.delete(/001/);
-  record.append(["001", id]);
+  record.append(['001', id]);
 
   // record.as('text' or 'marcxml') for debugging purposes;
   return record;

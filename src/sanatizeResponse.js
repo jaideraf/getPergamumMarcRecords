@@ -5,27 +5,28 @@ export default function sanatizeResponse(responseArr) {
     const newObj = obj;
     if (!newObj.descricao) newObj.descricao = newObj.texto_descricao;
     newObj.descricao = newObj.descricao?.trim();
-    if (newObj.pontuacao === null) newObj.pontuacao = "";
+    if (newObj.pontuacao === null) newObj.pontuacao = '';
     if (newObj.pontuacao) newObj.pontuacao = newObj.pontuacao.trimEnd();
-    if (newObj.indicador1 === null || newObj.indicador1 === "  ") {
-      newObj.indicador1 = " ";
+    if (newObj.indicador1 === null || newObj.indicador1 === '  ') {
+      newObj.indicador1 = ' ';
     } else {
       newObj.indicador1 = newObj.indicador1?.trim();
     }
-    if (newObj.indicador2 === null || newObj.indicador2 === "  ") {
-      newObj.indicador2 = " ";
+    if (newObj.indicador2 === null || newObj.indicador2 === '  ') {
+      newObj.indicador2 = ' ';
     } else {
       newObj.indicador2 = newObj.indicador2?.trim();
     }
     if (newObj.indicador1 !== undefined && newObj.indicador2 !== undefined) {
       newObj.indicadores = newObj.indicador1 + newObj.indicador2;
     }
-    if (newObj.seq_secao === null) newObj.seq_secao = "0";
-    if (newObj.secao === null) newObj.secao = "0";
-    newObj.subfieldData = `${newObj.secao === "0" ? "" : "$" + newObj.secao}${
+    if (newObj.seq_secao === null) newObj.seq_secao = '0';
+    if (newObj.secao === null) newObj.secao = '0';
+    // eslint-disable-next-line prefer-template
+    newObj.subfieldData = `${newObj.secao === '0' ? '' : '$' + newObj.secao}${
       newObj.descricao
     }${newObj.pontuacao}`;
-    newObj.paragrafo = newObj.paragrafo.padStart(3, "0");
+    newObj.paragrafo = newObj.paragrafo.padStart(3, '0');
     delete newObj.campo_fixo;
     delete newObj.texto_descricao;
     delete newObj.indicador1;

@@ -6,13 +6,14 @@ module.exports = {
   },
   overrides: [
   ],
+  extends: 'airbnb-base',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: "module",
+    sourceType: 'module',
   },
   rules: {
     'no-console': 'off',
     'import/extensions': 'off',
-    'eslint-disable no-restricted-syntax': 'off',
+    'no-restricted-syntax': 'off',
   },
 };
