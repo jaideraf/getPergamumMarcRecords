@@ -4,7 +4,7 @@ import buildMarcRecord from "../buildMarcRecord.js";
 export const acervoHome = (req, res) => {
   res.send(
     `Envie pelo menos um código de acervo e um endereço do Pergamum (OPAC). <br>
-    Opcionalmente, um media type (application/xml, application/marc, text/plain, application/json).<br>
+    Opcionalmente, um media type (application/xml, application/marc, text/plain, application/json). <br>
     Exemplo: <a href='http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml'>http://localhost:8080/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml</a>`
   );
 };

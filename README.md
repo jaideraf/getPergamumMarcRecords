@@ -2,7 +2,7 @@
 
 A tool to get [MARC (Machine-Readable Cataloging)](https://en.wikipedia.org/wiki/MARC_standards) bibliographic records from Pergamum API in many formats (MARC ISO 2709, MARCXML, JSON).
 
-If you want to use a Python version that uses Pergamum Web Service, see https://github.com/vitorsilverio/libraryapi.
+If you use an instance of Pergamum version 9 or you want to use a Python tool that uses Pergamum Web Service, see the [Library API](https://github.com/vitorsilverio/libraryapi) tool.
 
 ## Running
 
