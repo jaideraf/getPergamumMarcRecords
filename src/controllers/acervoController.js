@@ -2,6 +2,8 @@ import * as https from 'https';
 import axios from 'axios';
 import buildMarcRecord from '../buildMarcRecord.js';
 
+// Fix for "Unable to Verify the First Certificate" in Axios Request
+// https://backbencher.dev/solved-unable-to-verify-first-certificate-axios-request
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 });
