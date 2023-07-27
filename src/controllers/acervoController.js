@@ -1,5 +1,10 @@
+import * as https from 'https';
 import axios from 'axios';
 import buildMarcRecord from '../buildMarcRecord.js';
+
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: false,
+});
 
 export const acervoHome = (_req, res) => {
   res.send(
@@ -16,7 +21,7 @@ export const acervoId = (req, res) => {
 
   // Get the data
   axios
-    .get(`${url}/api/acervo/${id}/marc`)
+    .get(`${url}/api/acervo/${id}/marc`, { httpsAgent })
     .then((response) => {
       // handle success
       const record = buildMarcRecord(response.data, id);
