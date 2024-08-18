@@ -1,7 +1,7 @@
 // Build MARC ISO 2709 record using 'marcjs'
 
 import { Record } from 'marcjs';
-import sanatizeResponse from './sanatizeResponse.js';
+import sanitizeResponse from './sanitizeResponse.js';
 import { subfieldsMap, aggregateSubfields } from './aggregateSubfields.js';
 
 export default function buildMarcRecord(data, id) {
@@ -16,9 +16,9 @@ export default function buildMarcRecord(data, id) {
   }
   responseArr = data;
 
-  // Sanatize response and aggregate subfields data
-  const sanatizedResponse = sanatizeResponse(responseArr);
-  sanatizedResponse.forEach(aggregateSubfields);
+  // Sanitize response and aggregate subfields data
+  const sanitizedResponse = sanitizeResponse(responseArr);
+  sanitizedResponse.forEach(aggregateSubfields);
 
   // Build the MARC record
   const record = new Record();

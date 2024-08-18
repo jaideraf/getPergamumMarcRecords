@@ -1,6 +1,6 @@
 // Sanitize the returned response from the api/acervo/${codAcervo}/marc
 
-export default function sanatizeResponse(responseArr) {
+export default function sanitizeResponse(responseArr) {
   responseArr.forEach((obj) => {
     const newObj = obj;
     if (!newObj.descricao) newObj.descricao = newObj.texto_descricao;
@@ -23,9 +23,8 @@ export default function sanatizeResponse(responseArr) {
     if (newObj.seq_secao === null) newObj.seq_secao = '0';
     if (newObj.secao === null) newObj.secao = '0';
     // eslint-disable-next-line prefer-template
-    newObj.subfieldData = `${newObj.secao === '0' ? '' : '$' + newObj.secao}${
-      newObj.descricao
-    }${newObj.pontuacao}`;
+    newObj.subfieldData = `${newObj.secao === '0' ? '' : '$' + newObj.secao}${newObj.descricao
+      }${newObj.pontuacao}`;
     newObj.paragrafo = newObj.paragrafo.padStart(3, '0');
     delete newObj.campo_fixo;
     delete newObj.texto_descricao;
