@@ -23,7 +23,7 @@ export const acervoId = (req, res) => {
 
   // Get the data
   axios
-    .get(`${url}/api/acervo/${id}/marc`, { httpsAgent })
+    .get(`${url}/api/acervo/${id}/marc`, { httpsAgent, timeout: 5000 })
     .then((response) => {
       // handle success
       const record = buildMarcRecord(response.data, id);
