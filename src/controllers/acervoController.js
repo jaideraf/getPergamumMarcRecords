@@ -26,9 +26,6 @@ export const acervoId = (req, res) => {
     .get(`${url}/api/acervo/${id}/marc`, { httpsAgent, timeout: 5000 })
     .then((response) => {
       // handle success
-      if (response.data.status === 409) {
-        throw new Error('Error 409');
-      }
       const record = buildMarcRecord(response.data, id);
 
       switch (mediaType) {
@@ -55,11 +52,12 @@ export const acervoId = (req, res) => {
       }
     })
     .catch((error) => {
-      // handle error
-      console.log(error);
-      if (error.response.status === 404) {
+      if (error.response) {
+        // The request was made and the server responded with a status code
+        // that falls out of the range of 2xx
+        console.log(error.response.data);
         console.log(error.response.status);
-        res.sendStatus(error.response.status);
+        res.send(error.response.data);
       }
     });
 };
