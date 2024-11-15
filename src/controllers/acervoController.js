@@ -26,6 +26,9 @@ export const acervoId = (req, res) => {
     .get(`${url}/api/acervo/${id}/marc`, { httpsAgent, timeout: 5000 })
     .then((response) => {
       // handle success
+      if (response.data.status === 409) {
+        throw new Error('Error 409');
+      }
       const record = buildMarcRecord(response.data, id);
 
       switch (mediaType) {
