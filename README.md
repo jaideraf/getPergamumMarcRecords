@@ -25,6 +25,11 @@ or
 
 Check it out: https://getpergamum.bu.ufsc.br/acervo/339742?url=https://pergamum.ufsc.br&media_type=application/xml
 
+
+## Developping
+
+- `npm run dev`
+
 ## Demo
 
 ### Examples
