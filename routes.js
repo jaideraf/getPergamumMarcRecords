@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import home from './src/controllers/homeController.js';
 import { acervoHome, acervoId } from './src/controllers/acervoController.js';
+import home from './src/controllers/homeController.js';
 
 const route = Router();
 

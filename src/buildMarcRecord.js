@@ -1,8 +1,8 @@
 // Build MARC ISO 2709 record using 'marcjs'
 
 import { Record } from 'marcjs';
+import { aggregateSubfields, subfieldsMap } from './aggregateSubfields.js';
 import sanitizeResponse from './sanitizeResponse.js';
-import { subfieldsMap, aggregateSubfields } from './aggregateSubfields.js';
 
 export default function buildMarcRecord(data, id) {
   // Check if value is an array or an object (atendimento Pergamum #162129)
