@@ -22,7 +22,6 @@ export default function sanitizeResponse(responseArr) {
     }
     if (newObj.seq_secao === null) newObj.seq_secao = '0';
     if (newObj.secao === null) newObj.secao = '0';
-    // eslint-disable-next-line prefer-template
     newObj.subfieldData = `${newObj.secao === '0' ? '' : `$${newObj.secao}`}${newObj.descricao
       }${newObj.pontuacao}`;
     newObj.paragrafo = newObj.paragrafo.padStart(3, '0');
